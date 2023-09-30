@@ -17,3 +17,5 @@ git commit -m -->> m = explain the modification.
 
 git push--> publish commit; sync changes to UNIVERSAL repository
 
+for first timer, git push wont work.
+git push need to authorize github to vs code, then login.
