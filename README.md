@@ -10,7 +10,10 @@ GitHub Project for AI300
 git status -> show what brach you are on , and what to commit
 
 
-git add
+git add -->> highlight changes; commit change to LOCAL repository
 
 git commit -m -->> m = explain the modification.
+
+
+git push--> publish commit; sync changes to UNIVERSAL repository
 
