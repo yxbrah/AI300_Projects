@@ -19,3 +19,9 @@ git push--> publish commit; sync changes to UNIVERSAL repository
 
 for first timer, git push wont work.
 git push need to authorize github to vs code, then login.
+
+
+gitpush is to authorize ppl's status. i.e. see if person have authority to overwrite
+
+
+git pull-> ask teammate to take the latest update
