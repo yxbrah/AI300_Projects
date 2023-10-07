@@ -116,3 +116,41 @@ assert yx_credit.limit ==2500 ##to make sure credit limit is now 2500, if not wi
 yx_credit.check_balance()
 
 yx_credit.payment(200)
+
+class BankAccount:
+    bank_name = "Bank of Python"  # class attribute
+    #init is constructor
+    def __init__(self, account_holder_name, account_number, balance): #self->object attribute
+			# instance attributes
+        self.account_holder_name = account_holder_name  #on the right is passed in by function. #self-> somewhere in the memory, allocate space,create new account, put in a value.
+        self.account_number = account_number
+        self.balance = balance #use getter instead of attribute, may be reasons why method was implemented
+    def welcome(self):
+        print('welcome,',self.account_holder_name,'!')
+
+    def check_balance(self): #getter method.
+        return self.balance
+    
+    def deposit(self,figure):
+        self.balance+=figure
+    
+    def withdraw(self,figure):
+        if (figure>self.balance):
+            print ("insufficient funds")
+        else:
+            self.balance-=figure
+
+
+
+class SavingsAccount(BankAccount):
+    def __init__(self,account_holder_name, account_number, balance,interest_rate):
+        super().__init__(account_holder_name, account_number, balance)
+        self.interest_rate=interest_rate
+
+
+    def interest_earned(self,years):
+        interest_generated= self.balance* years *self.interest_rate
+        print(f'you have earned {interest_generated}')
+
+yx_savings=SavingsAccount('yx',12345678,5000,0.01)
+yx_savings.interest_earned(5)
